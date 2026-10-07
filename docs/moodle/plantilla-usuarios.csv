@@ -1,0 +1,4 @@
+username,password,firstname,lastname,email,institution,course1,role1,group1
+agarcia,Cambiar-2027!,Ana,Garcia,ana.garcia@ejemplo.org,Universidad de Ejemplo,invierno2027,student,participantes
+jlopez,Cambiar-2027!,Jorge,Lopez,jorge.lopez@ejemplo.org,CSIC,invierno2027,student,participantes
+mponente,Cambiar-2027!,Maria,Ponente,maria.ponente@ejemplo.org,Centro de Ejemplo,invierno2027,editingteacher,profesorado

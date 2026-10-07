@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ site.baseurl }}/" class="site-logo">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        {% for item in site.nav %}
+          {% if item.path contains '://' %}
+            <a href="{{ item.path }}" class="nav-link" target="_blank" rel="noopener noreferrer">{{ item.label }}</a>
+          {% else %}
+            <a href="{{ site.baseurl }}{{ item.path }}" class="nav-link{% if page.url == item.path %} active{% endif %}">{{ item.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" hidden></button>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logos">
+        <img
+          src="{{ site.baseurl }}/assets/img/logos/logo_secundario.svg"
+          alt="Conexión BCB"
+          class="footer-logo"
+        />
+      </div>
+      <p class="footer-tagline">{{ site.title }}</p>
+      <p class="footer-legal">Información práctica y contacto: ver <a href="{{ site.baseurl }}/logistics/">Logística</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.site-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function() {
+          nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-label', nav.classList.contains('is-open') ? 'Cerrar menú' : 'Abrir menú');
+        });
+        if (window.getComputedStyle(toggle).display !== 'none') toggle.removeAttribute('hidden');
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# =============================================================================
+# Profesorado de la Escuela de Invierno 2027
+# =============================================================================
+# Campos: nombre, rol (tema que imparte), foto (en assets/img/profesorado/),
+#         web (opcional).
+#
+# IMPORTANTE: esta lista se publica en la web. Añade a una persona solamente
+# cuando haya confirmado su participación.
+#
+# Más abajo está, comentado, el profesorado de la Escuela de Verano 2026 junto
+# con sus fotos, que ya están en `assets/img/profesorado/`. Si alguna de esas
+# personas repite, basta con descomentar su bloque.
+# -----------------------------------------------------------------------------
+
+# --- Ejemplo (bórralo cuando añadas personas reales) -------------------------
+- nombre: "[TBC] Nombre de la ponente"
+  rol: "[TBC] Tema de la sesión"
+  foto: ""           # p.ej. nombre_apellido.jpg, en assets/img/profesorado/
+  web: ""            # p.ej. https://ejemplo.org/
+
+# --- Profesorado de la edición de verano 2026 (pendiente de confirmar) -------
+# - nombre: Ana Conesa
+#   rol: Transcriptómica de lecturas largas
+#   foto: ana_conesa.webp
+#   web: https://conesalab.uv.es/
+# - nombre: Aureliano Bombarely
+#   rol: Ensamblado de genomas
+#   foto: aureliano_bombarely.webp
+#   web: https://bombarelylab.com/
+# - nombre: Juan Fernández‑Recio
+#   rol: AlphaFold y predicción de estructura de proteínas
+#   foto: Juan-Fdez-Recio.jpg
+#   web: https://www.icvv.es/english/3dbiowine
+# - nombre: Arnau Montagud
+#   rol: Modelos para biología de sistemas
+#   foto: arnau_montagud.jpg
+#   web: https://arnaumontagud.netlify.app/
+# - nombre: Javier De Las Rivas
+#   rol: Single-cell
+#   foto: JavierDeLasRivas.png
+#   web: http://bioinfow.dep.usal.es/
+# - nombre: Ian Morilla
+#   rol: Multi-ómica
+#   foto: ianmorrilla.png
+#   web: https://mlimowebsite.faculty.bio/
+# - nombre: Daniel Jesús García García
+#   rol: Transcriptómica espacial
+#   foto: Daniel.png
+#   web: https://www.ipb.csic.es/servicios/Bioinformatica/index.html

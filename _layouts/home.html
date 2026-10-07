@@ -1,0 +1,125 @@
+---
+layout: default
+---
+{%- assign c = site.curso -%}
+<div class="home">
+  <section class="hero">
+    <div class="container">
+      <img
+        src="{{ site.baseurl }}/assets/img/logos/logo_principal.svg"
+        alt="Conexión BCB · Escuela de Invierno"
+        class="hero-logo"
+      />
+      <h1 class="hero-title">{{ site.title }}</h1>
+      <p class="hero-dates">{{ c.fechas_corto }} · Lunes a viernes</p>
+      <p class="hero-tagline">
+        Curso avanzado de bioinformática organizado por la Conexión de Biología
+        Computacional y Bioinformática del CSIC. El curso va especialmente dirigido
+        a quienes quieren estar al día de los últimos avances en análisis de datos
+        bioinformáticos. El curso provee material didáctico, por lo que es
+        <strong>ideal para docentes en bioinformática</strong> que deseen actualizar sus asignaturas.
+      </p>
+      <a href="{{ site.baseurl }}/schedule/" class="btn btn-primary btn-programa">Ver programa</a>
+      <p style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
+        Matrícula de <strong>{{ c.precio }} por persona</strong> que incluye alojamiento en
+        pensión completa y participación en la Escuela de Invierno. Las personas socias de la
+        <a href="https://www.sebibc.es/" target="_blank" rel="noopener noreferrer">SEBiBC</a>
+        tienen un descuento de {{ c.descuento_socios }}. Consulta más detalles
+        en la sección de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
+      </p>
+      <p style="margin-top: 0; margin-bottom: var(--space-md);">
+        <strong>Preinscripción</strong> abierta hasta el <strong>{{ c.preinscripcion_cierre }}</strong>.
+      </p>
+      {% if c.preinscripcion_url and c.preinscripcion_url != '' %}
+      <a href="{{ c.preinscripcion_url }}" class="btn btn-secondary btn-preinscripcion" target="_blank" rel="noopener noreferrer">
+        Preinscripción
+      </a>
+      {% else %}
+      <p class="notice notice--pending">
+        El formulario de preinscripción se publicará aquí en cuanto esté disponible.
+      </p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="container">
+      <div class="card-grid">
+        <div class="card">
+          <h2>Perfil de participantes</h2>
+          <p>
+            Investigadores/as, técnicos/as y estudiantes de máster o doctorado que ya utilizan
+            herramientas de bioinformática y quieren actualizarse en métodos avanzados. El curso
+            también es muy útil para docentes que deseen renovar el contenido de sus asignaturas.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Qué aprenderás</h2>
+          <p>
+            Técnicas avanzadas de bioinformática, buenas prácticas para diseñar
+            asignaturas y cómo organizar sesiones teóricas y prácticas efectivas.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Requisitos previos</h2>
+          <p>
+            Familiaridad con la línea de comandos y con conceptos básicos de
+            bioinformática. Más detalles en la página de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aula-virtual-cta">
+    <div class="container">
+      <h2>Aula Virtual</h2>
+      <p>
+        Todo el material del curso —diapositivas, cuadernos de prácticas, datos de ejemplo
+        y entrega de actividades— se distribuye a través del {{ c.moodle_nombre }}.
+        Las personas inscritas reciben sus credenciales antes del comienzo del curso.
+      </p>
+      <p>
+        <a href="{{ site.baseurl }}/aula-virtual/" class="btn btn-secondary">Más información</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="schedule-overview">
+    <div class="container">
+      <h2>Semana de un vistazo</h2>
+      <ul class="day-links">
+        <li><a href="{{ site.baseurl }}/day1-monday/">Día 1 — {{ c.dia1 }}</a></li>
+        <li><a href="{{ site.baseurl }}/day2-tuesday/">Día 2 — {{ c.dia2 }}</a></li>
+        <li><a href="{{ site.baseurl }}/day3-wednesday/">Día 3 — {{ c.dia3 }}</a></li>
+        <li><a href="{{ site.baseurl }}/day4-thursday/">Día 4 — {{ c.dia4 }}</a></li>
+        <li><a href="{{ site.baseurl }}/day5-friday/">Día 5 — {{ c.dia5 }}</a></li>
+      </ul>
+      <p><a href="{{ site.baseurl }}/schedule/" class="btn btn-secondary">Programa completo</a></p>
+    </div>
+  </section>
+
+  {% assign profes = site.data.profesorado %}
+  {% if profes and profes.size > 0 %}
+  <section class="profesorado-overview">
+    <div class="container">
+      <h2>Profesorado</h2>
+      <div class="person-grid person-grid--compact">
+        {% for p in profes %}
+        <div class="person-card person-card--compact">
+          {% if p.foto %}
+          <img src="{{ site.baseurl }}/assets/img/profesorado/{{ p.foto }}" alt="{{ p.nombre }}" class="person-photo" />
+          {% endif %}
+          <h3 class="person-name">{{ p.nombre }}</h3>
+          <p class="person-rol">{{ p.rol }}</p>
+          {% if p.web %}
+          <a href="{{ p.web }}" target="_blank" rel="noopener noreferrer">Web</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <p><a href="{{ site.baseurl }}/organizacion/" class="btn btn-secondary">Ver organización completa</a></p>
+    </div>
+  </section>
+  {% endif %}
+</div>

@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<article class="page-content page-organizacion">
+  <div class="container">
+    <p class="breadcrumb">{{ site.title }} · {{ page.title }}</p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="page-body">
+      {{ content }}
+    </div>
+
+    {% assign profes = site.data.profesorado %}
+    {% if profes and profes.size > 0 %}
+    <section class="org-section">
+      <h2 class="org-section-title">Profesorado</h2>
+      <div class="person-grid">
+        {% for p in profes %}
+        <div class="person-card">
+          {% if p.foto %}
+          <img src="{{ site.baseurl }}/assets/img/profesorado/{{ p.foto }}" alt="{{ p.nombre }}" class="person-photo" />
+          {% endif %}
+          <h3 class="person-name">{{ p.nombre }}</h3>
+          <p class="person-rol">{{ p.rol }}</p>
+          {% if p.web %}
+          <p><a href="{{ p.web }}" target="_blank" rel="noopener noreferrer">Página web</a></p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% assign orgs = site.data.organizadores %}
+    {% if orgs and orgs.size > 0 %}
+    <section class="org-section">
+      <h2 class="org-section-title">Organizadores</h2>
+      <div class="person-grid">
+        {% for o in orgs %}
+        <div class="person-card">
+          {% if o.foto %}
+          <img src="{{ site.baseurl }}/assets/img/organizadores/{{ o.foto }}" alt="{{ o.nombre }}" class="person-photo" />
+          {% endif %}
+          <h3 class="person-name">{{ o.nombre }}</h3>
+          <p class="person-rol">{{ o.rol }}</p>
+          {% if o.web %}
+          <p><a href="{{ o.web }}" target="_blank" rel="noopener noreferrer">Página web</a></p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% assign patro = site.data.patrocinadores %}
+    {% if patro and patro.size > 0 %}
+    <section class="org-section">
+      <h2 class="org-section-title">Patrocinadores</h2>
+      <div class="sponsor-grid">
+        {% for s in patro %}
+        <div class="sponsor-card">
+          {% if s.logo %}
+          <a href="{% if s.web %}{{ s.web }}{% else %}#{% endif %}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link">
+            <img src="{{ site.baseurl }}/assets/img/logos/{{ s.logo }}" alt="{{ s.nombre }}" class="sponsor-logo" />
+          </a>
+          {% endif %}
+          <p class="sponsor-name">
+            {% if s.web %}
+              {% if s.logo %}
+                {{ s.nombre }}
+              {% else %}
+                <a href="{{ s.web }}" target="_blank" rel="noopener noreferrer">{{ s.nombre }}</a>
+              {% endif %}
+            {% else %}
+              {{ s.nombre }}
+            {% endif %}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</article>

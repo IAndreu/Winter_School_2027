@@ -1,0 +1,103 @@
+# =============================================================================
+# Escuela de Invierno en Bioinformática Avanzada 2027
+# =============================================================================
+# EDITA ESTE FICHERO PRIMERO. Los valores del bloque `curso:` se usan en
+# varias páginas a la vez (inicio, logística, pie de página), así que
+# cambiándolos aquí se actualiza todo el sitio.
+#
+# Todo lo marcado como "[TBC]" está pendiente de confirmar. Busca "TBC" en
+# todo el repositorio para localizar lo que queda por rellenar:
+#     grep -rn "TBC" .
+# =============================================================================
+
+title: "Escuela de Invierno en Bioinformática Avanzada 2027"
+description: "Curso avanzado de bioinformática sobre métodos modernos de análisis de datos, pensado para profesionales y estudiantes que quieren actualizarse y, en particular, para docentes que deseen renovar sus asignaturas."
+
+# IMPORTANTE: `baseurl` debe coincidir con el nombre del repositorio en GitHub.
+# Si el repositorio se llama Winter_School_2027, deja el valor tal cual.
+baseurl: "/Winter_School_2027"
+url: "https://conexionbcb.github.io"
+
+# -----------------------------------------------------------------------------
+# Datos del curso (usados en varias páginas)
+# -----------------------------------------------------------------------------
+curso:
+  # URL del repositorio en GitHub. Se usa para enlazar las carpetas de
+  # materiales (GitHub muestra el README de cada carpeta; GitHub Pages no sabe
+  # servir un índice de directorio, así que los enlaces van a GitHub).
+  # ¡Actualízala si mueves el repositorio a otra cuenta u organización!
+  repo_url: "https://github.com/ConexionBCB/Winter_School_2027"
+
+  # Fechas --------------------------------------------------------------------
+  fechas_corto: "[TBC] de 2027"              # p.ej. "25–29 de enero"
+  fechas_largo: "[TBC] de 2027 (de lunes a viernes)"
+  dia1: "[TBC]"                              # p.ej. "Lunes 25 de enero"
+  dia2: "[TBC]"
+  dia3: "[TBC]"
+  dia4: "[TBC]"
+  dia5: "[TBC]"
+
+  # Sede ----------------------------------------------------------------------
+  sede: "[TBC]"                              # p.ej. "Universidad de Oviedo, aula 24"
+  sede_direccion: "[TBC]"
+  sede_web: ""                               # deja vacío para ocultar el enlace
+  ciudad: "[TBC]"
+  alojamiento: "[TBC]"
+
+  # Matrícula -----------------------------------------------------------------
+  precio: "[TBC]"                            # p.ej. "500 €"
+  precio_socios: "[TBC]"                     # precio final para socias/os SEBiBC
+  descuento_socios: "[TBC]"                  # p.ej. "25 €"
+
+  # Plazos --------------------------------------------------------------------
+  preinscripcion_cierre: "[TBC]"             # p.ej. "14 de noviembre de 2026"
+  # Deja `preinscripcion_url` vacío mientras el formulario no exista: el botón
+  # de preinscripción se oculta automáticamente y no se publican enlaces rotos.
+  preinscripcion_url: ""
+
+  # Aula virtual (Moodle) -----------------------------------------------------
+  # Deja vacío hasta que el Moodle esté en marcha. Mientras esté vacío, la
+  # página "Aula Virtual" muestra un aviso de "próximamente" en lugar del botón
+  # de acceso. Ver docs/moodle/ para decidir el alojamiento.
+  moodle_url: ""
+  moodle_nombre: "Aula Virtual de la Escuela de Invierno"
+
+  # Contacto ------------------------------------------------------------------
+  email: "conexion-bcb@csic.es"
+
+# -----------------------------------------------------------------------------
+# Navegación (etiqueta, ruta relativa a baseurl)
+# -----------------------------------------------------------------------------
+nav:
+  - label: Inicio
+    path: /
+  - label: Programa
+    path: /schedule/
+  - label: Aula Virtual
+    path: /aula-virtual/
+  - label: Día 1
+    path: /day1-monday/
+  - label: Día 2
+    path: /day2-tuesday/
+  - label: Día 3
+    path: /day3-wednesday/
+  - label: Día 4
+    path: /day4-thursday/
+  - label: Día 5
+    path: /day5-friday/
+  - label: Organización
+    path: /organizacion/
+  - label: Logística
+    path: /logistics/
+
+# Build
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - docs/
+  - vendor/

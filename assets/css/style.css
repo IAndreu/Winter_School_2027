@@ -1,0 +1,661 @@
+/* Escuela de Invierno en Bioinformática Avanzada 2027 - BCB-inspired branding */
+:root {
+  --color-primary: #1a365d;
+  --color-primary-light: #2c5282;
+  --color-accent: #c53030;
+  --color-accent-hover: #9b2c2c;
+  --color-bg: #f7fafc;
+  --color-bg-card: #ffffff;
+  --color-text: #2d3748;
+  --color-text-muted: #718096;
+  --color-border: #e2e8f0;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --line-height-tight: 1.25;
+  --line-height-body: 1.6;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Header */
+.site-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.site-logo {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-logo:hover {
+  color: #e2e8f0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: var(--color-primary-light);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font: inherit;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: var(--space-md) 0;
+  }
+  .site-nav.is-open {
+    display: flex;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Main */
+.site-main {
+  min-height: 60vh;
+  padding-bottom: var(--space-2xl);
+}
+
+/* Home – Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+
+.hero-logo {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto var(--space-lg);
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+  line-height: var(--line-height-tight);
+}
+
+.hero-dates {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  margin: 0 0 var(--space-md);
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  max-width: 32em;
+  margin: 0 auto var(--space-xl);
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary-light);
+  color: #fff;
+}
+
+.btn.btn-programa {
+  background: #f6e05e;
+  color: #1a202c;
+}
+
+.btn.btn-programa:hover {
+  background: #ecc94b;
+  color: #1a202c;
+}
+
+.btn.btn-preinscripcion {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn.btn-preinscripcion:hover {
+  background: var(--color-accent-hover);
+  color: #fff;
+}
+
+/* Cards */
+.cards {
+  padding: var(--space-2xl) 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.card {
+  background: var(--color-bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+}
+
+.card h2 {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md);
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.card a {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+.card a:hover {
+  color: var(--color-accent);
+}
+
+/* Schedule overview */
+.schedule-overview {
+  padding: var(--space-2xl) 0;
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+}
+
+.schedule-overview h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-lg);
+}
+
+.day-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg);
+}
+
+.day-links li {
+  margin-bottom: var(--space-sm);
+}
+
+.day-links a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.day-links a:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+/* Profesorado / Organización (home + página Organización) */
+.profesorado-overview {
+  padding: var(--space-2xl) 0;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.profesorado-overview h2,
+.org-section-title {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-lg);
+}
+
+.org-section {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.person-grid--compact {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+
+.person-card {
+  background: var(--color-bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.person-card--compact {
+  padding: var(--space-md);
+}
+
+.person-photo {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  margin: 0 auto var(--space-md);
+  display: block;
+}
+
+.person-name {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-xs);
+}
+
+.person-rol {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+}
+
+.person-card a {
+  font-size: 0.875rem;
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.person-card a:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-xl);
+  align-items: center;
+  margin: 0 auto var(--space-lg);
+  max-width: 720px;
+  justify-items: center;
+  justify-content: center;
+}
+
+.sponsor-card {
+  text-align: center;
+}
+
+.sponsor-logo-link {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.sponsor-logo {
+  max-width: 220px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.sponsor-name {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.page-organizacion .page-body {
+  max-width: none;
+}
+
+/* Page content (schedule, day pages, logistics) */
+.page-content {
+  padding: var(--space-xl) 0;
+}
+
+.page-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.breadcrumb {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-xs);
+}
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.page-body {
+  max-width: 72ch;
+}
+
+.page-logo-wrap {
+  flex-shrink: 0;
+}
+
+.page-logo-small {
+  max-width: 160px;
+  height: auto;
+  opacity: 1;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-logo-wrap {
+    margin-top: var(--space-sm);
+  }
+}
+
+.day-logo {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.day-logo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-body h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin: var(--space-xl) 0 var(--space-md);
+}
+
+.page-body h3 {
+  font-size: 1.0625rem;
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.page-body p {
+  margin: 0 0 var(--space-md);
+}
+
+.page-body a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.page-body a:hover {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+/* Schedule table */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-lg) auto;
+  font-size: 0.9375rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.schedule-table th {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.schedule-table tr:nth-child(even) {
+  background: var(--color-bg);
+}
+
+.schedule-table tr:hover {
+  background: #edf2f7;
+}
+
+/* Materials list on day pages */
+.materials-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.materials-list li {
+  margin-bottom: var(--space-sm);
+  padding-left: 1.25em;
+  position: relative;
+}
+
+.materials-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-light);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-primary);
+  color: rgba(255, 255, 255, 0.85);
+  padding: var(--space-xl) 0;
+  margin-top: auto;
+}
+
+.site-footer .container {
+  text-align: center;
+}
+
+.footer-tagline {
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+}
+
+.footer-logos {
+  margin-bottom: var(--space-md);
+}
+
+.footer-logo {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+}
+
+.footer-legal {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: #e2e8f0;
+}
+
+/* ---------------------------------------------------------------------------
+   Escuela de Invierno 2027 — añadidos
+   --------------------------------------------------------------------------- */
+
+/* Fecha bajo el título de las páginas de día */
+.page-date {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-lg);
+}
+
+/* Aviso de "pendiente / próximamente" (preinscripción, Aula Virtual) */
+.notice {
+  margin: var(--space-md) 0;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.notice--pending {
+  border-left: 4px solid var(--color-accent);
+}
+
+.hero .notice {
+  display: inline-block;
+  max-width: 44rem;
+}
+
+/* Llamada al Aula Virtual en la portada */
+.aula-virtual-cta {
+  padding: var(--space-2xl) 0;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.aula-virtual-cta h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md);
+}
+
+.aula-virtual-cta p {
+  margin: 0 0 var(--space-md);
+  max-width: 44rem;
+}
+
+/* Bloque de cita (usado en avisos de horario / viajes) */
+.page-body blockquote {
+  margin: var(--space-lg) 0;
+  padding: var(--space-sm) var(--space-lg);
+  border-left: 4px solid var(--color-primary-light);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+}

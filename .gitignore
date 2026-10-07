@@ -1,0 +1,23 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock
+
+# macOS / editores
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Datos pesados: no subir al repositorio (ver CONTRIBUTING.md)
+*.bam
+*.cram
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.h5ad
+*.mbz

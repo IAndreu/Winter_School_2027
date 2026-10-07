@@ -1,0 +1,10 @@
+# Patrocinadores: nombre, logo (en assets/img/logos/), web (opcional)
+
+- nombre: Conexión de Biología Computacional y Bioinformática del CSIC
+  logo: logo_principal.svg
+  web: https://conexion-bcb.csic.es/
+
+- nombre: Sociedad Española de Bioinformática y Biología Computacional (SEBiBC)
+  # Añade un logo en assets/img/logos/ (por ejemplo, logo_sebibc.svg) y actualiza este campo
+  logo: cropped-logo_SEBiBC_blanco.webp
+  web: https://www.sebibc.es/

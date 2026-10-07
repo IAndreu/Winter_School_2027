@@ -1,0 +1,33 @@
+# =============================================================================
+# Equipo organizador de la Escuela de Invierno 2027
+# =============================================================================
+# Campos: nombre, rol, afiliación, foto (en assets/img/organizadores/),
+#         web (opcional).
+#
+# Igual que con el profesorado: publica únicamente a quienes hayan confirmado
+# su participación en esta edición. Abajo está, comentado, el equipo de la
+# edición de verano 2026 (sus fotos ya están en assets/img/organizadores/).
+# -----------------------------------------------------------------------------
+
+- nombre: "[TBC] Nombre"
+  rol: "[TBC] Dirección científica / Coordinación"
+  afiliación: "[TBC] Centro"
+  foto: ""
+  web: ""
+
+# --- Equipo de la edición de verano 2026 ------------------------------------
+# - nombre: Carolina Monzó
+#   rol: Directora Científica
+#   afiliación: Instituto de Biología Integrativa de Sistemas (I2SysBio-CSIC)
+#   foto: CarolMonzoPictureProfile_small.jpeg
+#   web: https://carolinamonzo.github.io/
+# - nombre: Ana Barra
+#   rol: Coordinadora
+#   afiliación: Consejo Superior de Investigaciones Científicas (CSIC)
+#   foto: Ana_Barra.jpg
+#   web: https://www.csic.es/
+# - nombre: Pedro Braña Coto
+#   rol: Coordinador local
+#   afiliación: Centro de Física de Materiales (CFM-CSIC)
+#   foto: pedro_brana.webp
+#   web: https://theosim.com/
