@@ -19,7 +19,7 @@ porque el alojamiento condiciona la videoconferencia disponible.
 
 ## Resumen de la recomendación
 
-1. **Preguntar al CSIC / universidad colaboradora** (siete preguntas en el doc 01):
+1. **Preguntar al CSIC / universidad colaboradora / CRAG** (siete preguntas en el doc 01):
    ¿Moodle institucional con cuentas externas, rol de Profesor **y
    videoconferencia para 40 personas en sesiones de 3,5 h**? ¿Hay licencia de
    Zoom institucional?
