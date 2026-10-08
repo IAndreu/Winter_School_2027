@@ -53,6 +53,18 @@ Si los datos son demasiado grandes para GitHub, enlázalos aquí:
 2. `practicas/01-preparacion.ipynb`
 3. `practicas/02-analisis.ipynb`
 
+## Puntos de control de la práctica
+
+Siendo el curso en línea, indica los momentos en los que todo el grupo debe tener
+el mismo resultado antes de continuar. Permite a cada persona comprobar que va
+bien sin tener que preguntar, y al profesorado detectar a quien se ha quedado
+atrás.
+
+| Tras el paso | Deberías tener |
+|---|---|
+| `01-preparacion` | [p. ej. 4 ficheros .bam en `resultados/`] |
+| `02-analisis` | [p. ej. una tabla con ~2 000 genes diferenciales] |
+
 ## Licencia
 
 [p. ej. CC BY 4.0 — reutilizable citando la autoría.]

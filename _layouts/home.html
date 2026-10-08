@@ -12,17 +12,20 @@ layout: default
       />
       <h1 class="hero-title">{{ site.title }}</h1>
       <p class="hero-dates">{{ c.fechas_corto }} · Lunes a viernes</p>
+      <p class="hero-format">{{ c.modalidad }} · {{ c.plazas }} plazas</p>
       <p class="hero-tagline">
         Curso avanzado de bioinformática organizado por la Conexión de Biología
-        Computacional y Bioinformática del CSIC. El curso va especialmente dirigido
-        a quienes quieren estar al día de los últimos avances en análisis de datos
-        bioinformáticos. El curso provee material didáctico, por lo que es
+        Computacional y Bioinformática del CSIC, impartido <strong>íntegramente en
+        línea</strong>. Va especialmente dirigido a quienes quieren estar al día de
+        los últimos avances en análisis de datos bioinformáticos. El curso provee
+        material didáctico, por lo que es
         <strong>ideal para docentes en bioinformática</strong> que deseen actualizar sus asignaturas.
       </p>
       <a href="{{ site.baseurl }}/schedule/" class="btn btn-primary btn-programa">Ver programa</a>
       <p style="margin-top: var(--space-md); margin-bottom: var(--space-md);">
-        Matrícula de <strong>{{ c.precio }} por persona</strong> que incluye alojamiento en
-        pensión completa y participación en la Escuela de Invierno. Las personas socias de la
+        Matrícula de <strong>{{ c.precio }} por persona</strong>, que incluye el acceso a
+        todas las sesiones en directo, al material docente y al servidor de prácticas.
+        Las personas socias de la
         <a href="https://www.sebibc.es/" target="_blank" rel="noopener noreferrer">SEBiBC</a>
         tienen un descuento de {{ c.descuento_socios }}. Consulta más detalles
         en la sección de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
@@ -64,7 +67,10 @@ layout: default
           <h2>Requisitos previos</h2>
           <p>
             Familiaridad con la línea de comandos y con conceptos básicos de
-            bioinformática. Más detalles en la página de <a href="{{ site.baseurl }}/logistics/">Logística</a>.
+            bioinformática. Para seguir el curso basta con un navegador
+            actualizado, auriculares y buena conexión: las prácticas se hacen en
+            un servidor remoto, sin instalar nada. Más detalles en la página de
+            <a href="{{ site.baseurl }}/logistics/">Logística</a>.
           </p>
         </div>
       </div>
@@ -73,14 +79,20 @@ layout: default
 
   <section class="aula-virtual-cta">
     <div class="container">
-      <h2>Aula Virtual</h2>
+      <h2>El curso sucede en el Aula Virtual</h2>
       <p>
-        Todo el material del curso —diapositivas, cuadernos de prácticas, datos de ejemplo
-        y entrega de actividades— se distribuye a través del {{ c.moodle_nombre }}.
-        Las personas inscritas reciben sus credenciales antes del comienzo del curso.
+        Al ser una edición en línea, el {{ c.moodle_nombre }} no es un complemento:
+        es el aula. Desde ahí se entra a las clases en directo por videoconferencia,
+        se descargan las diapositivas y los cuadernos de prácticas, se accede al
+        servidor donde se trabaja y se entregan las actividades.
       </p>
       <p>
-        <a href="{{ site.baseurl }}/aula-virtual/" class="btn btn-secondary">Más información</a>
+        Las personas inscritas reciben sus credenciales antes del comienzo del curso.
+        Los enlaces a las sesiones no se publican en esta web: se entra siempre
+        desde el aula.
+      </p>
+      <p>
+        <a href="{{ site.baseurl }}/aula-virtual/" class="btn btn-secondary">Cómo funciona</a>
       </p>
     </div>
   </section>

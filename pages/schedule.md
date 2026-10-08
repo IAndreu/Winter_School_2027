@@ -11,6 +11,9 @@ permalink: /schedule/
 Resumen de la semana. Cada día tiene su propia página con el horario detallado,
 los temas y enlaces a los materiales teóricos y prácticos.
 
+Todas las sesiones son **{{ site.curso.modalidad }}** y los horarios están en
+**{{ site.curso.zona_horaria }}**.
+
 <!-- TODO (organización): completar la columna "Tema principal" cuando se
      cierre el programa, y las fechas en `_config.yml` (bloque `curso:`). -->
 
@@ -23,8 +26,8 @@ los temas y enlaces a los materiales teóricos y prácticos.
 | Viernes   | {{ site.curso.dia5 }}   | **[TBC]** y cierre del curso | [Día 5]({{ site.baseurl }}/day5-friday/) |
 {: .schedule-table }
 
-Todo el material de las sesiones se distribuye a través del
+Las clases en directo y todo el material se encuentran en el
 [Aula Virtual]({{ site.baseurl }}/aula-virtual/).
 
-Para información sobre sede, requisitos previos y contacto, consulta la página de
-[Logística]({{ site.baseurl }}/logistics/).
+Para información sobre requisitos técnicos, matrícula y contacto, consulta la
+página de [Logística]({{ site.baseurl }}/logistics/).

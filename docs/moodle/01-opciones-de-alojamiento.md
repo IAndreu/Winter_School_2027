@@ -3,6 +3,14 @@
 Documento de decisión para la Escuela de Invierno en Bioinformática Avanzada 2027.
 Fecha: octubre de 2026.
 
+> **Esta edición es 100 % en línea.** Eso sube el listón de todo lo que sigue: el
+> Moodle no es un repositorio de apoyo, es el aula. Si se cae un martes a las
+> 10:00 no hay plan B presencial, y la videoconferencia pasa a ser un requisito
+> de primera, no un añadido. La elección de plataforma de videollamada está en
+> [03-videoconferencia.md](03-videoconferencia.md) y conviene leer los dos
+> documentos juntos: en la práctica se decide una sola cosa, porque la opción de
+> alojamiento condiciona la de videoconferencia.
+
 ## El punto de partida
 
 El sitio web del curso es un sitio **estático** publicado en GitHub Pages. Moodle
@@ -21,20 +29,28 @@ respuesta:
 
 | Variable | Estimación para la Escuela de Invierno |
 |---|---|
-| Participantes | 25–40 |
+| Participantes | **30 máximo** |
 | Profesorado + organización | 8–12 |
-| **Cuentas totales** | **~50** |
+| **Cuentas totales** | **~40, nunca más de 50** |
+| Concurrencia en videollamada | ~40, en sesiones de 3,5 h |
 | Uso intensivo | 1 semana, más 2 semanas de entregas posteriores |
-| Material | Diapositivas y cuadernos: cientos de MB. Datos de prácticas: potencialmente varios GB |
+| Material | Diapositivas y cuadernos: cientos de MB. Datos de prácticas: en el servidor de prácticas, no en Moodle |
+| Grabaciones | 30 h de clase si se graban: **decenas de GB** |
 | Vida útil | La edición, más consulta posterior del material abierto |
 
-Dos consecuencias importantes:
+Tres consecuencias importantes:
 
-1. **Cincuenta cuentas es muy poco.** Entra en el escalón más barato de casi
+1. **Cuarenta cuentas es muy poco.** Entra en el escalón más barato de casi
    cualquier opción. No hay que optimizar por coste por usuario.
 2. **El pico de uso es de una semana al año.** Pagar un servicio anual para
    usarlo siete días es caro por hora de uso, pero *gestionar un servidor* para
-   usarlo siete días es caro en horas de persona. Esa es la tensión real.
+   usarlo siete días es caro en horas de persona. Esa es la tensión real, y el
+   formato en línea la resuelve a favor del servicio gestionado: el día del curso
+   queremos estar dando clase, no mirando logs.
+3. **Las grabaciones son el único consumo de disco que importa.** Los datos de
+   prácticas viven en el servidor de prácticas y las diapositivas pesan poco. Si
+   se decide grabar, hay que sacar los ficheros del aula (ver el documento 03);
+   si no, la cuota de almacenamiento deja de ser un criterio.
 
 ---
 
@@ -72,14 +88,26 @@ Pedir un espacio de curso en un Moodle que ya existe y que alguien ya administra
    procedimiento y plazo?
 2. ¿Se puede dar el rol de *Profesor* a ponentes externos, con permiso para
    subir contenido por su cuenta?
-3. ¿Cuál es el tamaño máximo de fichero y la cuota total del curso?
-4. ¿Qué pasa con el curso al terminar? ¿Se archiva, se borra, se puede exportar?
-5. ¿Hay ventanas de mantenimiento en las fechas del curso?
+3. **¿Qué sistema de videoconferencia hay disponible desde ese Moodle?**
+   ¿BigBlueButton con servidor propio, el plugin de Zoom, Teams? ¿Soporta 40
+   personas en sesiones de 3,5 horas? (Esta pregunta es nueva respecto a una
+   edición presencial, y ahora es la más importante de la lista.)
+4. ¿Se pueden **grabar** las sesiones? ¿Dónde se guardan las grabaciones y
+   cuánto espacio hay?
+5. ¿Cuál es el tamaño máximo de fichero y la cuota total del curso?
+6. ¿Qué pasa con el curso al terminar? ¿Se archiva, se borra, se puede exportar?
+7. ¿Hay ventanas de mantenimiento en las fechas del curso? **¿Y soporte técnico
+   disponible en horario de mañana durante esa semana?**
 
 > **Recomendación:** empezar por aquí. Una sola conversación con el servicio de
 > informática del CSIC o de la universidad anfitriona resuelve o descarta esta
 > opción en pocos días, y es la que menos trabajo deja. Las otras dos solo tienen
-> sentido si la respuesta a la pregunta 1 o la 2 es "no".
+> sentido si la respuesta a la pregunta 1, la 2 o la 3 es "no".
+>
+> Para un curso en línea, la pregunta 3 puede descartar por sí sola un Moodle que
+> cumpla todo lo demás: un aula institucional perfecta sin videoconferencia
+> utilizable no nos sirve, aunque en ese caso cabe combinarla con Zoom
+> institucional (ver documento 03).
 
 ---
 
@@ -178,14 +206,15 @@ mantiene encendido tres meses alrededor del curso, son **60–120 €** por edic
 
 | | A — Institucional | B — MoodleCloud | C — Autoalojado |
 |---|---|---|---|
-| Coste directo | 0 € | ~160–250 $/año | ~60–120 € por edición |
+| Coste directo | 0 € | ~160–250 $/año | ~60–120 € por edición, **más el servidor de BBB** |
 | Coste en horas de persona | Muy bajo | Bajo | **Alto y continuado** |
 | Tiempo hasta estar operativo | Días o semanas (trámite) | Horas | 1–3 días + mantenimiento |
 | Cuentas externas | **Incierto — verificar** | Sin problema | Sin problema |
+| **Videoconferencia** | **Incierto — verificar** | **Incluida, hasta 100 usuarios** | Segundo servidor dedicado |
 | Control y plugins | Bajo | Medio | Total |
-| Almacenamiento | Según institución | Limitado | Según disco |
+| Almacenamiento | Según institución | Escaso (1–2,5 GB) | Según disco |
 | RGPD | Resuelto | Del proveedor + nuestro | **Nuestro** |
-| Riesgo principal | Que no admitan externos | Cuota de disco | Que nadie lo mantenga |
+| Riesgo principal | Que no admitan externos o no haya videollamada | Cuota de disco | Que nadie lo mantenga, **y ahora por duplicado** |
 
 ---
 
@@ -193,29 +222,39 @@ mantiene encendido tres meses alrededor del curso, son **60–120 €** por edic
 
 **Un camino en dos pasos, no una elección única.**
 
-1. **Preguntar primero por la opción A**, con las cinco preguntas de arriba. Es
+1. **Preguntar primero por la opción A**, con las siete preguntas de arriba. Es
    gratis, no compromete a nada y en pocos días se sabe si es viable. Si admite
-   cuentas externas con rol de Profesor, es la mejor opción por mucho: elimina
-   tanto el coste como la responsabilidad legal.
+   cuentas externas con rol de Profesor **y tiene videoconferencia utilizable**,
+   es la mejor opción por mucho: elimina el coste y la responsabilidad legal.
 
-2. **Si la A no sirve, ir a MoodleCloud Mini.** Para un curso de una semana con
-   50 personas, 250 $ al año compran exactamente lo que hace falta y evitan el
-   único riesgo que de verdad puede estropear el curso: que la persona que
-   administra el servidor esté de viaje el lunes por la mañana.
+   Una variante que conviene tener presente: un Moodle institucional que admita
+   externos pero sin videollamada decente **sigue sirviendo** si la institución
+   tiene licencia de Zoom. Aula institucional + Zoom institucional = coste cero.
 
-3. **La opción C solo si** ya existe una máquina gestionada por un centro con
-   alguien que la mantiene como parte de su trabajo, o si hay un requisito
-   técnico concreto que MoodleCloud no cubra (un plugin propio, integración con
-   el servidor de prácticas, datos que no pueden salir de la institución).
-   Montarlo "porque es más barato" es una cuenta mal hecha: 100 € de VPS frente
-   a 250 $ de SaaS no compensan ni una sola tarde de incidencias.
+2. **Si la A no sirve, ir a MoodleCloud Mini.** Para un curso en línea de una
+   semana con 40 personas, 250 $ al año compran el aula **y la videoconferencia
+   integrada para hasta 100 usuarios**, y evitan el único riesgo que de verdad
+   puede estropear el curso: que la persona que administra el servidor no esté
+   disponible el lunes por la mañana. Siendo el curso en línea, ese riesgo ya no
+   afecta solo al material: afecta a que la clase ocurra.
+
+3. **La opción C, prácticamente descartada para esta edición.** Antes era una
+   alternativa razonable si había infraestructura disponible. Ahora implica
+   administrar **dos** servidores —Moodle y un BBB dedicado de 8 núcleos, 16 GB y
+   250 Mbit/s simétricos, que no puede compartir máquina— para usarlos cinco
+   días. Solo tiene sentido si un centro **ya opera** una instancia BBB con
+   personal propio, caso en el que estamos de hecho en la opción A.
 
 **Y en los tres casos, la misma regla sobre los datos:** los conjuntos de datos
 de prácticas **no** se suben al Moodle. Van a Zenodo, a un bucket, o al servidor
 de prácticas donde de todos modos se van a analizar, y en el aula solo se pone
-el enlace y el checksum. Así la cuota de almacenamiento deja de ser un factor en
-la decisión, el material queda citable con DOI y no hay que mover gigabytes por
-el navegador de cada participante.
+el enlace y el checksum. Al ser el curso en línea esto deja de ser solo una
+cuestión de cuota: nadie va a descargar 2 GB por una conexión doméstica antes de
+una práctica. El dato se queda donde se analiza.
+
+Lo mismo para las **grabaciones**, que son el nuevo consumidor de disco: si se
+graban, se descargan tras cada sesión y se publican en el servicio de vídeo
+institucional, dejando en Moodle solo el enlace.
 
 ## Plazos
 
@@ -223,13 +262,18 @@ Contando hacia atrás desde el inicio del curso:
 
 | Cuándo | Qué |
 |---|---|
-| −4 meses | Decidir alojamiento (preguntar a la institución ya) |
-| −3 meses | Aula creada, estructura de secciones montada |
+| −4 meses | Decidir alojamiento **y videoconferencia** (preguntar a la institución ya) |
+| −3 meses | Aula creada, estructura de secciones montada, una sala por día |
 | −2 meses | Altas del profesorado y guía enviada |
-| −6 semanas | Ponentes suben material teórico |
-| −1 mes | Altas de participantes, correo de bienvenida |
-| −1 semana | Prueba de acceso con una cuenta real de participante |
+| −6 semanas | Ponentes suben material teórico · **prueba técnica con cada ponente** |
+| −1 mes | Altas de participantes, correo de bienvenida · decidido el tema de grabaciones |
+| −1 semana | **Sala de prueba abierta** a participantes (audio, cámara, servidor) |
+| −1 día | Repaso de enlaces, roles de moderador y plan B escrito |
 | +2 semanas | Cierre de entregas, exportación y archivado |
+
+Las dos filas en negrita son nuevas respecto a una edición presencial y son las
+que más incidencias evitan. El detalle está en
+[03-videoconferencia.md](03-videoconferencia.md).
 
 ## Fuentes
 

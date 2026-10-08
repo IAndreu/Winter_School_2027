@@ -11,7 +11,7 @@
 # =============================================================================
 
 title: "Escuela de Invierno en Bioinformática Avanzada 2027"
-description: "Curso avanzado de bioinformática sobre métodos modernos de análisis de datos, pensado para profesionales y estudiantes que quieren actualizarse y, en particular, para docentes que deseen renovar sus asignaturas."
+description: "Curso avanzado de bioinformática 100 % en línea sobre métodos modernos de análisis de datos, pensado para profesionales y estudiantes que quieren actualizarse y, en particular, para docentes que deseen renovar sus asignaturas."
 
 # IMPORTANTE: `baseurl` debe coincidir con el nombre del repositorio en GitHub.
 # Si el repositorio se llama Winter_School_2027, deja el valor tal cual.
@@ -37,15 +37,18 @@ curso:
   dia4: "[TBC]"
   dia5: "[TBC]"
 
-  # Sede ----------------------------------------------------------------------
-  sede: "[TBC]"                              # p.ej. "Universidad de Oviedo, aula 24"
-  sede_direccion: "[TBC]"
-  sede_web: ""                               # deja vacío para ocultar el enlace
-  ciudad: "[TBC]"
-  alojamiento: "[TBC]"
+  # Formato -------------------------------------------------------------------
+  # Esta edición es 100 % en línea: no hay sede física ni alojamiento.
+  modalidad: "100 % en línea"
+  plazas: "30"                               # nº máximo de participantes
+  # Zona horaria de referencia de los horarios publicados. Imprescindible
+  # indicarla: habrá participantes en husos distintos.
+  zona_horaria: "CET (hora peninsular española)"
 
   # Matrícula -----------------------------------------------------------------
-  precio: "[TBC]"                            # p.ej. "500 €"
+  # Al ser en línea desaparecen alojamiento y manutención, así que el precio
+  # de la edición de verano (500 €) no sirve de referencia.
+  precio: "[TBC]"                            # p.ej. "150 €"
   precio_socios: "[TBC]"                     # precio final para socias/os SEBiBC
   descuento_socios: "[TBC]"                  # p.ej. "25 €"
 
@@ -61,6 +64,16 @@ curso:
   # de acceso. Ver docs/moodle/ para decidir el alojamiento.
   moodle_url: ""
   moodle_nombre: "Aula Virtual de la Escuela de Invierno"
+
+  # Videoconferencia ----------------------------------------------------------
+  # Siendo el curso 100 % en línea, las clases se dan por videoconferencia
+  # DESDE DENTRO del aula virtual (no se publican enlaces de reunión en la web:
+  # eso evita que personas no inscritas entren en las sesiones).
+  # Ver docs/moodle/03-videoconferencia.md para elegir plataforma.
+  videoconferencia: "[TBC]"                  # p.ej. "BigBlueButton" o "Zoom"
+  # ¿Se graban las sesiones? Afecta al consentimiento que hay que pedir y al
+  # almacenamiento necesario. Valores: "sí", "no", "[TBC]"
+  grabaciones: "[TBC]"
 
   # Contacto ------------------------------------------------------------------
   email: "conexion-bcb@csic.es"

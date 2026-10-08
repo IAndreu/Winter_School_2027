@@ -23,7 +23,14 @@ permalink: /day5-friday/
 | 14:00–15:00 | Comida                                                             | —                        |
 {: .schedule-table }
 
-> La tarde del viernes queda libre para facilitar los viajes de vuelta.
+> La tarde del viernes queda libre.
+
+## Acceso a la sesión
+
+La clase de este día se imparte por videoconferencia desde la sección
+correspondiente del [Aula Virtual]({{ site.baseurl }}/aula-virtual/). Entra
+unos minutos antes de la hora de inicio. Los horarios están en
+{{ site.curso.zona_horaria }}.
 
 ## Materiales
 

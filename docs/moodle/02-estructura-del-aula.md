@@ -1,10 +1,13 @@
 # Estructura del Aula Virtual
 
 Cómo se organiza el curso en Moodle para que **cada ponente gestione su propio
-material** sin pasar por la organización, y sin poder romper el trabajo de otra
-persona.
+material y modere su propia sesión en directo** sin pasar por la organización, y
+sin poder romper el trabajo de otra persona.
 
 Esto vale igual para las tres opciones de alojamiento del documento anterior.
+Siendo la edición 100 % en línea, cada sección contiene además la clase en
+directo de ese día, y el rol de *Profesor* es también lo que da a cada ponente
+permiso de **moderador** en su sala.
 
 ## La decisión de fondo: un curso, no siete
 
@@ -27,9 +30,12 @@ Escuela de Invierno en Bioinformática Avanzada 2027
 │
 ├── Sección 0 — General (siempre visible arriba)
 │     ├── Avisos (foro, solo organización escribe)
-│     ├── Guía de bienvenida y normas
+│     ├── Guía de bienvenida, normas y horarios CON ZONA HORARIA
+│     ├── ▶ SALA DE PRUEBA TÉCNICA (abierta la semana anterior)
+│     ├── Requisitos técnicos y guía de la videollamada
 │     ├── Programa de la semana (enlace al sitio web)
 │     ├── Acceso al servidor de prácticas (credenciales)
+│     ├── Contacto de guardia para incidencias técnicas
 │     ├── Foro general de dudas
 │     └── Lista de participantes / presentaciones
 │
@@ -61,12 +67,18 @@ compartir una sección entre dos personas: mantiene los permisos simples.
 | Rol | Quién | Puede |
 |---|---|---|
 | **Gestor** | Coordinación (2 personas) | Todo: crear secciones, inscribir, configurar, exportar |
-| **Profesor** (en su sección) | Cada ponente | Editar **su** sección: subir, ordenar, crear tareas y foros, calificar lo suyo |
+| **Profesor** (en su sección) | Cada ponente | Editar **su** sección: subir, ordenar, crear tareas y foros, calificar lo suyo, y **moderar su sala** |
 | **Profesor sin permiso de edición** | Ponentes invitados, observadores | Ver todo y participar en foros, sin modificar |
-| **Estudiante** | Participantes inscritos | Ver material visible, entregar tareas, escribir en foros |
+| **Estudiante** | Participantes inscritos | Ver material visible, entregar tareas, escribir en foros, **entrar en las salas como participante** |
 
-Dos personas con rol de Gestor, no una. Si la única persona con permisos está en
-un avión el lunes del curso, el problema es serio y perfectamente evitable.
+Dos personas con rol de Gestor, no una. Si la única persona con permisos no está
+disponible el lunes del curso, el problema es serio y perfectamente evitable.
+
+**Y en una edición en línea, una persona de la coordinación con rol de moderador
+en todas las salas.** No para dar clase, sino para abrir la sala si el ponente
+llega tarde, admitir a quien se quede fuera, silenciar un micrófono abierto y
+atender el chat mientras el ponente explica. Es un papel real: conviene
+asignarlo por días y que esté escrito quién lo cubre cada mañana.
 
 ### Asignar un ponente a su sección
 
@@ -94,12 +106,19 @@ y se deja ya creado en las secciones vacías, como ejemplo a rellenar:
 ```
 Día N — [Tema] — [Ponente]
   Descripción: 2–3 frases + objetivos de aprendizaje
+  ├── 00 · ▶ SESIÓN EN DIRECTO — 10:00 (actividad de videoconferencia)
   ├── 01 · Teoría — [tema] (archivo PDF)
   ├── 02 · Guion de prácticas (archivo o página)
-  ├── 03 · Datos y entorno (URL al servidor / Zenodo, con checksum)
+  ├── 03 · Datos y entorno (URL al servidor, con checksum)
   ├── 04 · Material complementario (carpeta, opcional)
+  ├── 05 · Grabación de la sesión (enlace, si se graba)
   └── Foro de dudas — Día N
 ```
+
+El elemento `00` es la propia actividad de videoconferencia, y va **siempre
+primero y bien visible**: es lo que la gente busca a las 09:58 de la mañana.
+Conviene que el nombre incluya la hora y, si el grupo es internacional, la zona
+horaria.
 
 El prefijo numérico es lo único realmente importante: Moodle ordena por posición
 manual y, sin números, al cabo de tres subidas nadie sabe por dónde empezar.
@@ -113,6 +132,11 @@ manejable. Se puede automatizar con **restricciones de acceso por fecha**, de
 modo que no haya que acordarse de abrirlas a mano.
 
 La sección 0 y la de evaluación están visibles desde el primer día.
+
+**Excepción en una edición en línea:** la sala de prueba técnica de la sección 0
+tiene que estar abierta **la semana anterior**, no el primer día. Es el único
+elemento del aula que se usa antes de que empiece el curso, y es el que evita la
+media hora de caos del lunes por la mañana.
 
 ## Inscripción de participantes
 
@@ -143,7 +167,13 @@ Puntos a resolver antes de abrir el aula, sea cual sea el alojamiento:
   meses después del curso, conservando solo las calificaciones necesarias para
   el certificado ECTS.
 - **Grabaciones de sesiones**, si las hay: requieren consentimiento explícito y
-  separado.
+  separado, recogido en el formulario de inscripción y no al entrar en la sala.
+  En un curso en línea esto deja de ser hipotético: hay que decidirlo (ver
+  [03-videoconferencia.md](03-videoconferencia.md)) y también preguntar al
+  profesorado, que puede no querer ser grabado.
+- **Registros de conexión** a las videollamadas: son datos de asistencia y, si se
+  usan para los ECTS, hay que decirlo. Conservar solo lo necesario para emitir el
+  certificado.
 - Moodle incluye herramientas de RGPD (*Política del sitio*, *Solicitudes de
   datos*): conviene activarlas en lugar de improvisar.
 

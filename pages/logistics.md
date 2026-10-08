@@ -14,7 +14,18 @@ Información práctica de la {{ site.title }}.
 
 <!-- TODO (organización): los valores marcados como [TBC] se editan en
      `_config.yml`, bloque `curso:`. No hace falta tocar esta página para
-     cambiar fechas, precios o sede. -->
+     cambiar fechas, precios o plataforma de videoconferencia. -->
+
+## Formato
+
+Esta edición es **{{ c.modalidad }}**. Todas las sesiones, teóricas y prácticas,
+se imparten por videoconferencia desde el
+[Aula Virtual]({{ site.baseurl }}/aula-virtual/). No hay desplazamiento, ni sede
+física, ni alojamiento.
+
+**Plazas limitadas a {{ c.plazas }} participantes.** El curso es una escuela con
+sesiones prácticas guiadas, no un seminario abierto: el límite existe para que
+el profesorado pueda atender a cada persona durante los ejercicios.
 
 ## Matrícula
 
@@ -23,11 +34,12 @@ Información práctica de la {{ site.title }}.
   [Sociedad Española de Bioinformática y Biología Computacional (SEBiBC)](https://www.sebibc.es/)
   (precio final {{ c.precio_socios }}).
 - La matrícula incluye:
-  - Alojamiento en **pensión completa** (desayuno, comida, cena y pausas de café).
-  - Acceso a todas las sesiones teóricas y prácticas.
-  - Material docente proporcionado durante el curso, disponible en el
-    [Aula Virtual]({{ site.baseurl }}/aula-virtual/).
-  - Acceso al servidor donde se realizan las sesiones prácticas.
+  - Acceso a todas las sesiones en directo.
+  - Acceso al [Aula Virtual]({{ site.baseurl }}/aula-virtual/) con todo el
+    material docente.
+  - Acceso al servidor donde se realizan las sesiones prácticas, sin necesidad
+    de instalar nada en el ordenador propio.
+  - Certificado de asistencia.
 
 ## Fechas y horario
 
@@ -35,33 +47,63 @@ Información práctica de la {{ site.title }}.
 - Sesiones (de martes a jueves): **10:00–13:30** y **14:30–18:00**
   (pausa para comer de 13:30 a 14:30).
   - El lunes las actividades comenzarán después de la comida.
-  - El viernes por la tarde no habrá sesiones para facilitar los viajes de vuelta.
+  - El viernes por la tarde no habrá sesiones.
 
-> Al celebrarse en invierno, ten en cuenta las horas de luz y las condiciones
-> meteorológicas al planificar los desplazamientos. Recomendamos llegar la tarde
-> anterior al comienzo del curso.
+> **Todos los horarios están en {{ c.zona_horaria }}.** Si participas desde otro
+> huso horario, comprueba la diferencia antes del primer día. El calendario del
+> Aula Virtual muestra las horas ya convertidas a la zona de tu perfil.
 
-## Sede
+En las sesiones largas habrá pausas cortas cada 60–75 minutos. Seguir un curso
+intensivo por videoconferencia cansa más que hacerlo en persona, y el programa
+lo tiene en cuenta.
 
-La Escuela de Invierno se celebrará en **{{ c.sede }}**.
+## Requisitos técnicos
+{: #requisitos-tecnicos }
 
-- **Dirección:** {{ c.sede_direccion }}
-{% if c.sede_web and c.sede_web != '' %}- **Web de la sede:** <{{ c.sede_web }}>
-{% endif %}
+Lo que necesitas para seguir el curso:
 
-El alojamiento incluido en la matrícula será en **{{ c.alojamiento }}**
-(los detalles concretos se comunicarán a las personas inscritas).
+| | Mínimo | Recomendado |
+|---|---|---|
+| Conexión | 5 Mbps de bajada / 2 de subida | 20 Mbps, por cable antes que por wifi |
+| Navegador | Chrome, Firefox, Edge o Safari actualizados | Chrome o Firefox al día |
+| Audio | Auriculares con micrófono | Auriculares con micrófono (evitan el eco) |
+| Cámara | Recomendada | Recomendada |
+| Pantalla | 1 monitor | **2 monitores o 2 dispositivos**: uno para la clase y otro para practicar |
 
-## Cómo llegar
+Dos puntos que marcan la diferencia:
 
-<!-- TODO (organización): sustituir esta sección por las indicaciones concretas
-     de la sede (aeropuerto, estación de tren, autobuses urbanos, taxis).
-     En la edición de verano 2026 esta sección cubría avión, tren, autobús y
-     transporte interno; puede servir como modelo. -->
+- **Usa auriculares.** El altavoz del portátil provoca eco y obliga a silenciar
+  a todo el mundo, lo que mata las preguntas.
+- **Dos pantallas, o un segundo dispositivo.** Las sesiones prácticas consisten
+  en seguir al ponente mientras escribes tus propios comandos. Con una sola
+  pantalla pequeña se vuelve incómodo. Una tablet o un segundo portátil para la
+  videollamada sirve perfectamente.
 
-Las indicaciones detalladas para llegar a **{{ c.ciudad }}** (aeropuerto más
-cercano, estación de tren, autobuses y transporte urbano) se publicarán aquí en
-cuanto se confirme la sede.
+No hace falta instalar software de bioinformática: las prácticas se hacen en un
+**servidor remoto** al que se accede con el navegador. Las instrucciones de
+acceso estarán en el Aula Virtual antes del comienzo.
+
+**Prueba de conexión:** unos días antes del curso se abrirá una sala de prueba
+en el Aula Virtual para que compruebes cámara, micrófono y acceso al servidor.
+Dedícale cinco minutos: resolver un problema de audio el lunes a las 10:00
+cuesta mucho más.
+
+## Cómo funcionan las sesiones
+
+- **Entrada a las clases:** desde el Aula Virtual, en la sección del día
+  correspondiente. No se publican enlaces de videollamada en esta web.
+- **Preguntas:** en voz, levantando la mano, o por el chat de la sesión. Cada día
+  tiene además un foro para dudas que surjan después.
+- **Prácticas:** el profesorado puede abrir salas pequeñas para atender dudas
+  concretas sin interrumpir al resto del grupo.
+- **Cámara:** se recomienda tenerla encendida al menos en las presentaciones y
+  durante las prácticas. Ayuda mucho a que el profesorado sepa si el grupo está
+  siguiendo el ritmo.
+
+<!-- TODO (organización): confirmar si se graban las sesiones. Si se graban,
+     hace falta recoger consentimiento explícito en la inscripción y decidir
+     cuánto tiempo se conservan las grabaciones. Ver
+     docs/moodle/03-videoconferencia.md -->
 
 ## Requisitos previos
 
@@ -70,16 +112,14 @@ cuanto se confirme la sede.
 - El curso está orientado a personas que ya trabajan o estudian en bioinformática
   y quieren profundizar en temas avanzados. Resulta especialmente útil para
   quienes preparan o imparten docencia en estas áreas.
-- Será necesario un portátil con conexión a internet y un navegador actualizado
-  para acceder al [Aula Virtual]({{ site.baseurl }}/aula-virtual/) y al servidor
-  de prácticas.
 
 ## Reconocimiento de créditos ECTS
 
 La Escuela de Invierno ofrece la posibilidad de reconocimiento de **créditos
 ECTS**. Para ello, las personas participantes deberán:
 
-- Asistir a las sesiones del curso (según los criterios que se especifiquen).
+- Asistir a las sesiones del curso. Al ser en línea, la asistencia se registra
+  automáticamente a partir de la conexión a cada sesión.
 - Elaborar y entregar un **syllabus breve** sobre uno de los temas tratados
   durante la semana, siguiendo la plantilla y criterios explicados el día 1.
 

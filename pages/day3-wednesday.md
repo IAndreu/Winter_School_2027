@@ -24,6 +24,13 @@ permalink: /day3-wednesday/
 | 14:30–18:00 | **[TBC: tema]** (teoría + prácticas) — **[TBC: ponente]**   | Teoría + pausa + práctica |
 {: .schedule-table }
 
+## Acceso a la sesión
+
+La clase de este día se imparte por videoconferencia desde la sección
+correspondiente del [Aula Virtual]({{ site.baseurl }}/aula-virtual/). Entra
+unos minutos antes de la hora de inicio. Los horarios están en
+{{ site.curso.zona_horaria }}.
+
 ## Materiales
 
 Los materiales de este día se publican en el [Aula Virtual]({{ site.baseurl }}/aula-virtual/)

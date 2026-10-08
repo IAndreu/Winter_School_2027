@@ -18,7 +18,8 @@ permalink: /day1-monday/
 
 ## Horario
 
-> El primer día las actividades comienzan después de la comida.
+> El primer día las actividades comienzan después de la comida. Los horarios están
+> en {{ site.curso.zona_horaria }}.
 
 | Hora        | Sesión                                                           | Tipo           |
 |-------------|------------------------------------------------------------------|----------------|
@@ -27,6 +28,13 @@ permalink: /day1-monday/
 | 16:00–17:00 | Recursos para la docencia en bioinformática (GitHub, entornos…)  | Teoría + pausa |
 | 17:00–18:00 | Conferencia invitada — **[TBC]**                                 | Keynote        |
 {: .schedule-table }
+
+## Acceso a la sesión
+
+La clase de este día se imparte por videoconferencia desde la sección
+correspondiente del [Aula Virtual]({{ site.baseurl }}/aula-virtual/). Entra
+unos minutos antes de la hora de inicio. Los horarios están en
+{{ site.curso.zona_horaria }}.
 
 ## Materiales
 
